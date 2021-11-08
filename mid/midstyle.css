@@ -1,0 +1,339 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  max-width: 100%; 
+  overflow-x: hidden; /*--disable horizontal scrolling--*/
+}
+
+a {
+  text-decoration: none;
+  color: #49b5e7;
+}
+
+a:hover {
+  color: #76c7ed;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Dosis", sans-serif;
+}
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: #fff;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 20px 0;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.05);
+}
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+.navbar {
+  padding: 0;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.navbar li {
+  position: relative;
+}
+.navbar a, .navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Dosis", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f394c;
+  transition: 0.3s;
+}
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  color: #49b5e7;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 70vh;
+  background-image: url("pic/gallery/fab1f5d745fd8da3d4ec.jpg")
+  /*--source: https://i.pinimg.com/originals/12/f3/c6/12f3c6bbc36468aae05505d163a8b3d1.jpg --*/
+}
+#hero h1 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #d5dee2;
+  text-transform: uppercase;
+}
+#hero h2 {
+  color: #eff1f1;
+  margin: 10px 0 0 0;
+  font-size: 20px;
+}
+#hero .welcome {
+  float: left;
+  width: 50%;
+  margin-top: 80px;
+  margin-left: 50px;
+}
+/*-------------------------------------------------------------
+# About
+-------------------------------------------------------------*/
+#about h2 {
+  text-align: center;
+  font-size: 35px;
+}
+#about p {
+  text-align: justify;
+  padding: 0px 30px 0px 30px;
+}
+/*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
+#gallery .gallery {
+  display: inline-block;
+  width: 100%;
+}
+.gallery img {
+  opacity: 0.0;
+}
+.gallery .gallery-item {
+  float: left;
+  margin-left: 4px;
+  margin-bottom: 4px;
+  width: 395px;
+  min-width: 33%;
+  max-width: 100%;
+  height: 600px;
+  background-image: none; /*--bg-img in each item is different--*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+/*--------------------------------------------------------------
+# Menu
+--------------------------------------------------------------*/
+#menu {
+  clear: both;
+}
+.menu .menu-wrap {
+  float: left;
+  margin-left: 7px;
+  margin-bottom: 7px;
+  width: 392px;
+  min-width: 30%;
+  max-width: 100%;
+  height: 395px;
+  background-image: none; /*--bg-img in each item is different--*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.menu .menu-wrap {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.menu .menu-wrap::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+.menu .menu-wrap .menu-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu .menu-wrap .menu-info::before {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  border-top: 3px solid #bdc6ca;
+  border-left: 3px solid #bdc6ca;
+  transition: all 0.5s ease 0s;
+  z-index: 99;
+}
+.menu .menu-wrap .menu-info::after {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  border-bottom: 3px solid #bdc6ca;
+  border-right: 3px solid #bdc6ca;
+  transition: all 0.5s ease 0s;
+  z-index: 99;
+}
+.menu .menu-wrap .menu-info h4 {
+  font-size: 20px;
+  color: #0f394c;
+  font-weight: 600;
+}
+.menu .menu-wrap .menu-info p {
+  color: #0f394c;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+.menu .menu-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+.menu .menu-wrap:hover .menu-info {
+  opacity: 1;
+}
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+#contact {
+  clear: both;
+}
+.contact .info {
+  width: 100%;
+  background: #fff;
+  display: inline-block;
+}
+.contact .info .item {
+  min-width: 33%;
+  max-width: 100%;
+  float: left;
+}
+::placeholder {
+color: darkgrey;
+font-family: "Open Sans", sans-serif;
+}
+.contact .info i {
+  font-size: 20px;
+  color: #49b5e7;
+  margin: 20px 10px 0px 5px;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #ebf7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #0f394c;
+}
+.contact .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #2079a1;
+}
+.contact .info .item:hover i {
+  background: #a9d8f0;
+}
+.contact .message {
+  text-align: center;
+  width: 100%;
+}
+.contact .message form {
+  margin-bottom: 30px;
+}
+.contact .message input, textarea {
+  width: 50%;
+  border: ridge;
+  padding: 10px 10px;
+  margin: 8px 0 8px 0;
+}
+.contact .message button {
+  width: 110px;
+  height: 38px;
+  color: #fff;
+  background: #49b5e7;
+  border-style: none;
+  border-radius: 6px;
+}
+.contact .message:hover button {
+  cursor: pointer;
+  background: #1da2e0;
+  transition: all 0.3s ease-in-out;
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  clear:both;
+  background-color: #e0f0f7;
+  padding: 0 0 30px 0;
+  color: #444444;
+  font-size: 14px;
+}
+#footer .container {
+  text-align: center;
+  width: 100%;
+}
+#footer .footer-contact {
+  padding: 0 10px 0 10px;
+  margin-bottom: 30px;
+}
+#footer .footer-contact p {
+  font-size: 14px;
+  margin-bottom: 0;
+  font-family: "Lato", sans-serif;
+  color: #777777;
+}
+#footer h3 {
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+#footer .social-icon a {
+  display: inline-block;
+  background: #49b5e7;
+  color: #fff;
+  padding: 8px 8px 5px 8px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+#footer .social-icon a:hover {
+  background: #1da2e0;
+  transform: scale(1.1);
+}
